@@ -6,3 +6,138 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+
+// CSS personalizzato
+
+/* variabili di root */
+:root {
+    --prova-dark: #2E3532;
+    --prova-vanilla: #EADAA2;
+    --prova1: #8B2635;
+    --prova2: #C6A664;
+    --border-nav-item: #0282F9;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+/* Classe di debug */
+.debug {
+    // border: 1px solid var(--prova1);
+    border: 1px solid red;
+}
+
+/* Classe fluida per le immagini */
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* ------------------ NavBar dell'header.blade.php ------------------ */
+.height-menu {
+    background-color: white !important;
+    height: 100px;
+    padding: 0 15px;
+}
+
+.height-nav-menu {
+    height: 100%;
+}
+
+.nav-link {
+    padding: 0 !important;
+    line-height: 100px;
+}
+
+.nav-link.active {
+    color: var(--border-nav-item) !important;
+}
+
+.nav-item {
+    padding: 0 15px;
+}
+
+li.nav-item a {
+    text-transform: uppercase;
+}
+
+.nav-item a:hover {
+    border-bottom: 5px solid var(--border-nav-item);
+    color: var(--border-nav-item);
+    font-weight: bold;
+}
+
+#navbarNav,
+.navbar-toggler {
+    background-color: white;
+    z-index: 5000;
+    // height: 1000px;
+}
+
+// Aggiungendo un pò di margin e padding evito che al click sul pulsante hamburger menu, quest'ultimo e il logo si spostino verso l'alto dalla loro posizione originale
+.navbar-brand {
+    margin: 15;
+    padding: 15;
+}
+
+/* Media query sul click al pulsante hamburger menu quando il menu è collassato (su schermi piccoli) sotto i 992px, lascio che si adatti automaticamente */
+@media (max-width: 991px) {
+    .height-nav-menu {
+        margin-top: -10px;
+        height: auto !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item a:hover {
+        margin-top: 5px;
+        border-bottom: 5px solid var(--border-nav-item);
+        color: var(--border-nav-item);
+        font-weight: bold;
+    }
+}
+
+/* ------------------ Fine NavBar dell'header.blade.php ------------------ */
+
+
+/* ------------------ Sezione footer del file footer.blade.php ------------------ */
+footer {
+    background-image: url("/resources/img/footer-bg.jpg");
+    opacity: 0.95;
+    // height: 500px;
+    background-repeat: round;
+}
+
+footer .container .row {
+    color: white;
+}
+
+footer ul li {
+    list-style-type: none;
+    color: #959595;
+}
+
+footer .container .row p {
+    margin-top: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+ul {
+    padding: 0;
+}
+
+footer .container .row .col p {
+    text-transform: uppercase;
+}

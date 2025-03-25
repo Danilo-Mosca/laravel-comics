@@ -1,23 +1,28 @@
-<!DOCTYPE html>
-<html lang="it">
+{{-- per indicare che questa pagina utilizza il layout master dobbiamo usare la parola extends: --}}
+@extends('layouts.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel Comics</title>
+{{-- Sezione del titolo della pagina --}}
+@section('title')
+    Laravel Comics
+@endsection
 
-    {{-- Istruzione che permette a Laravel di cercare le risorse per Bootstrap ed SCSS: --}}
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+{{-- --------------------------------------------------------------------------------------------------------------- --}}
+@php
 
-</head>
+// dd(config('comics'));   // prelevo le informazioni dal file di configurazione "comics.php.php"
 
-<body>
-<h1>Laravel Comics</h1>
-    @php
-        dd(config('comics'));
-    @endphp
+// Salvo l'array letterale contenente i comics (dal file di configurazione "comics.php" nella directory: config/comics.php) in una variabile cards
+$cards = config('comics');
+
+@endphp
+{{-- --------------------------------------------------------------------------------------------------------------- --}}
 
 </body>
 
+{{-- Sezione della pagina personalizzata chiamata "content" nel layout: --}}
+@section('content')
+<h1>Homepage Laravel Comics</h1>
+<p>Sezione personalizzata di ogni pagina</p>
+    
+@endsection
 </html>
