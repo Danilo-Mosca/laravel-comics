@@ -113,6 +113,13 @@ li.nav-item a {
     }
 }
 
+@media (max-width: 768px) {
+
+    .footer-up-ul-class li span {
+        font-size: 8px !important;
+    }
+}
+
 @media (max-width: 576px) {
     .button-footer-down {
         font-size: 10px !important;
@@ -128,6 +135,19 @@ li.nav-item a {
         margin: 1px !important;
         font-size: 10px !important;
         cursor: pointer;
+    }
+
+    .footer-up-ul-class li img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .footer-up-ul-class {
+        flex-wrap: wrap;
+    }
+
+    .footer-up-ul-class li span {
+        margin: 0;
     }
 }
 
@@ -189,13 +209,22 @@ footer .container .row .col p {
     height: 110px;
 }
 
+
+
+/* ------------------ Sezione footer up  del file footer.blade.php (la banda azzurra all'inizio del footer ------------------ */
+
 .footer-up-ul-class {
-    margin: 30px;
+    margin: 0px;
     text-align: center;
 }
 
 .footer-up-ul-class li {
-    padding: 0 50px;
+    cursor: pointer;
+}
+
+.footer-up-ul-class li:hover {
+    opacity: 0.5;
+
 }
 
 .footer-up-ul-class li img {
@@ -203,15 +232,19 @@ footer .container .row .col p {
     max-height: 50px;
 }
 
-.footer-up-ul-class li span{
+.footer-up-ul-class li span {
+    margin: 10px;
     text-transform: uppercase;
     color: white;
     font-size: 12px;
-    margin-left: 5px;
+    // margin-left: 5px;
 }
 
+/* ------------------ Fine sezione footer up  del file footer.blade.php (la banda azzurra all'inizio del footer ------------------ */
 
 
+
+/* ------------ Sezione footer dowm del file footer.blade.php (l'ultima banda, quella con il pulsante a destra e le icone social a sinistra ------------ */
 
 .footer-down {
     background-color: var(--footer-color);
@@ -252,3 +285,5 @@ ul.button-footer-social li {
 ul.button-footer-social li:hover {
     opacity: 0.5;
 }
+
+/* ---------- Fine sezione footer dowm del file footer.blade.php (l'ultima banda, quella con il pulsante a destra e le icone social a sinistra ---------- */
