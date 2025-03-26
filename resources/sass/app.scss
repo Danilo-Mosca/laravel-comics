@@ -315,6 +315,7 @@ ul.button-footer-social li:hover {
     /* Garantisce che l'immagine copra tutta la zona senza distorsioni */
     object-position: top;
     /* L'immagine parte dall'alto se ha bisogno di essere ritagliata */
+    cursor: pointer;
 }
 
 .card-body {
@@ -326,6 +327,7 @@ ul.button-footer-social li:hover {
 .card-title {
     color: var(--cards-text);
     font-size: 14px;
+    cursor: pointer;
 }
 
 /* ---------- Fine sezione personalizzazione card dei comics ---------- */
@@ -333,3 +335,10 @@ ul.button-footer-social li:hover {
 
 
 /* ---------- Sezione Personalizzazione Jumbotron ---------- */
+
+/* NON USATO PERCHE' INSERITO COME CSS INLINE NEL COMPONENTE JUMBOTRON */
+
+// .jumbo {
+//     height: 300px !important;
+//     object-position: top !important;
+// }
