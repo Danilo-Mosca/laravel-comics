@@ -18,6 +18,8 @@
     --prova2: #C6A664;
     --button-item-color: #0282F9;
     --footer-color: #303030;
+    --body-background: #1C1C1C;
+    --cards-text: #FCF3EA;
 }
 
 /* Reset */
@@ -41,6 +43,10 @@ img {
     max-width: 100%;
     display: block;
     object-fit: cover;
+}
+
+body {
+    background-color: var(--body-background);
 }
 
 /* ------------------ NavBar dell'header.blade.php ------------------ */
@@ -287,3 +293,35 @@ ul.button-footer-social li:hover {
 }
 
 /* ---------- Fine sezione footer dowm del file footer.blade.php (l'ultima banda, quella con il pulsante a destra e le icone social a sinistra ---------- */
+
+/* ---------- Personalizzazione card dei comics ---------- */
+
+.card {
+    border-radius: 0px;
+    border: none;
+    overflow: hidden;
+    background-color: var(--body-background);
+    /* Nasconde qualsiasi parte dell'immagine che esce dai limiti della card */
+}
+
+.card-img-top {
+    border-radius: 0px;
+    width: 100%;
+    height: 200px;
+    /* Altezza fissa per uniformare le immagini */
+    object-fit: cover;
+    /* Garantisce che l'immagine copra tutta la zona senza distorsioni */
+    object-position: top;
+    /* L'immagine parte dall'alto se ha bisogno di essere ritagliata */
+}
+
+.card-body {
+    background-color: var(--body-background);
+    padding: 20 0;
+
+}
+
+.card-title {
+    color: var(--cards-text);
+    font-size: 14px;
+}

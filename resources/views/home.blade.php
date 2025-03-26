@@ -9,9 +9,9 @@
 {{-- --------------------------------------------------------------------------------------------------------------- --}}
 @php
 
-// dd(config('comics'));   // prelevo le informazioni dal file di configurazione "comics.php.php"
+    // dd(config('comics'));   // prelevo le informazioni dal file di configurazione "comics.php.php"
 
-// Salvo l'array letterale contenente i comics (dal file di configurazione "comics.php" nella directory: config/comics.php) in una variabile cards
+    // Salvo l'array letterale contenente i comics (dal file di configurazione "comics.php" nella directory: config/comics.php) in una variabile cards
 $cards = config('comics');
 
 @endphp
@@ -21,8 +21,20 @@ $cards = config('comics');
 
 {{-- Sezione della pagina personalizzata chiamata "content" nel layout: --}}
 @section('content')
-<h1>Homepage Laravel Comics</h1>
-<p>Sezione personalizzata di ogni pagina</p>
-    
+    <div class="container mt-4">
+        <div class="row g-3"> <!-- Spazio tra le card -->
+            @foreach ($cards as $card)
+                <div class="col-lg-2 col-md-4 col-12"> <!-- 6 per riga su desktop, 3 su tablet, 1 su mobile -->
+                    <div class="card">
+                        <img src="{{ $card['thumb'] }}" class="card-img-top" alt="{{ $card['series'] }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ strtoupper($card['series']) }}</h5>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
+
 </html>
