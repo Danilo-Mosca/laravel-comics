@@ -21,6 +21,14 @@ $cards = config('comics');
 
 {{-- Sezione della pagina personalizzata chiamata "content" nel layout: --}}
 @section('content')
+    @php
+        $jumbotron = 'resources/img/jumbotron.jpg';
+    @endphp
+
+    <div class="container">
+        <img src="{{ Vite::asset($jumbotron) }}" alt="Jumbotron" style="height: 268; object-position: top">
+    </div>
+
     <div class="container mt-4">
         <div class="row g-3"> <!-- Spazio tra le card -->
             @foreach ($cards as $card)
