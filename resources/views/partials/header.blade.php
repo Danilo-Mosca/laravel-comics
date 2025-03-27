@@ -15,10 +15,10 @@
             <div class="collapse navbar-collapse justify-content-end height-nav-menu" id="navbarNav">
                 <ul class="navbar-nav height-nav-menu">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Characters</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Characters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Comics</a>
+                        <a class="nav-link" href="{{ route('single-page') }}">Comics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Movies</a>
