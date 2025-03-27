@@ -27,7 +27,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: bold;
 }
 
@@ -190,6 +190,14 @@ footer ul li {
     color: #959595;
 }
 
+footer ul li a{
+    text-decoration: none;
+    color: #959595;
+}
+footer ul li a:hover {
+    color: white;
+}
+
 footer .container .row p {
     margin-top: 50px;
     font-size: 20px;
@@ -344,6 +352,7 @@ ul.button-footer-social li:hover {
 
 .card-button {
     color: white;
+    text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;
     padding: 8px 50px;
