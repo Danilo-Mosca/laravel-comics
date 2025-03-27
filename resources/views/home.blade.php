@@ -11,9 +11,6 @@
 
     // dd(config('comics'));   // prelevo le informazioni dal file di configurazione "comics.php.php"
 
-    // Salvo l'array letterale contenente i comics (dal file di configurazione "comics.php" nella directory: config/comics.php) in una variabile cards
-$cards = config('comics');
-
 @endphp
 {{-- --------------------------------------------------------------------------------------------------------------- --}}
 

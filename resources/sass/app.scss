@@ -190,10 +190,11 @@ footer ul li {
     color: #959595;
 }
 
-footer ul li a{
+footer ul li a {
     text-decoration: none;
     color: #959595;
 }
+
 footer ul li a:hover {
     color: white;
 }
@@ -338,10 +339,13 @@ ul.button-footer-social li:hover {
     cursor: pointer;
 }
 
+.card-img-top:hover {
+    opacity: 0.5;
+}
+
 .card-body {
     background-color: var(--body-background);
     padding: 20 0;
-
 }
 
 .card-title {
@@ -398,6 +402,14 @@ ul.button-footer-social li:hover {
     position: absolute;
     bottom: -20px; // posizionamento dal basso rispetto al genitore relative
     left: calc(100vw - 85vw); // posizionamento da sinistra rispetto al genitore relative calcolato con le viewport width
+
+    // INVECE DI RENDERLO ABSOLUTE LUI E L'IMMAGINE JUMBOTRON RELATIVE, AVREI POTUTO INSERIRE LA RIGA DI CODICE DI SEGUITO:
+ // transform: translateY(-50%); // che dice di spostare nell'asse y del 50% in meno dalla sua posizione
+    // E POI CANCELLARE LE 3 RIGHE DI CODICE DI SOPRA:
+    // position: absolute;
+    // bottom: -20px; // posizionamento dal basso rispetto al genitore relative
+    // left: calc(100vw - 85vw); // posizionamento da sinistra rispetto al genitore relative calcolato con le viewport width
+
     text-transform: uppercase;
     color: white;
     font-size: 16px;
